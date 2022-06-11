@@ -1,0 +1,19 @@
+
+body{
+  background-image: url(simple.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#registerForm{
+  text-align: center;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10%;
+}
+
+#registerBtn hover {
+  color: black;
+
+}

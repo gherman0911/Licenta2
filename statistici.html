@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<title></title>
+<link href="statistici.css" rel="stylesheet" type-"text/css">
+<h2>Statistici numar clienti pe anul curent</h2>
+<body>
+<canvas id="myChart" style="width:100%;max-width:750px"></canvas>
+<script>
+var xValues = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
+var yValues = [3,3,4,6,5,9,10,9,9,10,10,10];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 3, max:10}}],
+    }
+  }
+});
+</script>
+
+
+</body>
+</html>

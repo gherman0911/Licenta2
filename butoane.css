@@ -1,0 +1,8 @@
+body{
+  background-image: url(simple.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 10%
+}

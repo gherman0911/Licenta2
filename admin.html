@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="admin.css">
+
+  </head>
+  <body id="header">
+
+    <h1>Pagina admin</h1>
+
+    <h3>Adaugare client</h3>
+    <div class="form">
+      <input type="text" name="nume" placeholder="nume"/>
+      <input type="text" name="prenume" placeholder="prenume"/>
+      <input type="text" name="kg" placeholder="kilograme"/>
+      <input type="text" name="cm" placeholder="inaltime"/>
+      <input type="text" name="varsta" placeholder="varsta"/>
+      <button id="add">Adauga client</button>
+      </div>
+    <br>
+    <br>
+    <h3>Afisare evolutie client</h3>
+    <div id="search">
+      <form action="http://localhost/cautare_admin.php" method="post">
+       <input type="text" name="username" placeholder="Username" id="username" required>
+
+        <input type="submit" value="Cauta">
+    </div>
+    <br>
+    <br>
+    <h3>Afisare evolutie client</h3>
+        <button id="statistici"><a href="http://localhost/statistici.html">Vezi statistici</a></button>
+  </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>

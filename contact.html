@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+    <link href="contact.css" rel="stylesheet" type-"text/css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+
+
+  <body id="header">
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="#">AG</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/html.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/despre.html">Despre</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost/contact.html">Contacteaza-ma</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/tarife.html">Tarife</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/antrenamente.html">Antrenamente și nutriție</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost/login.html">Login</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+<div class="container">
+  <form action="mailto:gherman0911@gmail.com" method="post" onsubmit="return checkForm(this);">
+ <label  for="nume1">Nume:</label> <input type="text" name="nume1" id="nume1" /><br/>
+ <label for="pnume1">Prenume:</label> <input type="text" name="pnume1" id="pnume1" /><br/>
+ <label for="email1">E-mail:</label> <input type="text" name="email1" id="email1" /><br/>
+ <br>
+ <label for="mesaj1">Mesaj:</label>  <textarea id="mesaj" name="mesaj1" placeholder="Pune-mi o intrebare!"></textarea>
+ <input type="submit" name="fsubmit" id="fsubmit" value="Submit" />
+</form>
+</div>
+<script type="text/javascript">
+
+var regx_chr = /^([a-zA-Z0-9_-]+)$/;
+var regx_mail = /^([a-zA-Z0-9]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,3})$/;
+
+
+function checkForm(frm1) {
+  var fre = false;
+
+  // preluare casete formular
+  var nume1 = frm1.nume1;
+  var pnume1 = frm1.pnume1;
+  var email1 = frm1.email1;
+  var mesaj1 = frm1.mesaj1;
+  // verificare valori (Nume, Parola, E-mail), daca sunt incorecte, returneaza alert si selecteaza casuta
+  if(nume1.value.length<3 || nume1.value.length>18 || nume1.value.search(regx_chr)==-1) {
+    alert('Numele trebuie sa contina intre 3 si 18 caractere \nNumere, Litere, "-" si "_"');
+    nume1.select();    // selecteaza casuta pt. Nume
+  }
+  else if(pnume1.value.length<3 || pnume1.value.length>18 || pnume1.value.search(regx_chr)==-1) {
+    alert('Preumele trebuie sa contina intre 3 si 18 caractere \nNumere, Litere, "-" si "_"');
+    pnume1.select();    // selecteaza casuta pt. Nume
+  }
+  else if(email1.value.search(regx_mail)==-1) {
+    alert('Adaugati o adresa de e-mail corecta');
+    email1.select();    // selecteaza casuta pt. E-mail
+  }
+  else if(mesaj1.value.length<3 || pnume1.value.search(regx_chr)==-1) {
+    alert('Mesajul trebuie sa contina minim 3 caractere \nNumere, Litere, "-" si "_"');
+    mesaj1.select();    // selecteaza casuta pt. Nume
+  }
+  else fre = true;
+
+  return fre;
+}
+</script>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<footer>
+  <div class="footer-content">
+    <ul class="socials">
+      <li><a href="https://www.facebook.com/andrada.gherman.54/"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/gherman0911/"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCCgLoMYIyP0U56dEhEL1wXQ"><i class="fa fa-youtube"></i></a></li>
+        </div>
+        <div class="footer-bottom">
+          <h4 style="color:blue">Gherman Andrada @antrenor personal</h4>
+
+</div>
+</footer>
+
+
+  </body>
+</html>
